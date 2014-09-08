@@ -1,5 +1,6 @@
 Graphite
 ========
+========
 
 This role installs and configures graphite.
 
