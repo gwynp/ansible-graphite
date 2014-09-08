@@ -1,14 +1,5 @@
 [
   {
-    "pk": 14,
-    "model": "contenttypes.contenttype",
-    "fields": {
-      "model": "contenttype",
-      "name": "content type",
-      "app_label": "contenttypes"
-    }
-  },
-  {
     "pk": 6,
     "model": "contenttypes.contenttype",
     "fields": {
@@ -35,15 +26,7 @@
       "app_label": "auth"
     }
   },
-  {
-    "pk": 13,
-    "model": "contenttypes.contenttype",
-    "fields": {
-      "model": "logentry",
-      "name": "log entry",
-      "app_label": "admin"
-    }
-  },
+  
   {
     "pk": 11,
     "model": "contenttypes.contenttype",

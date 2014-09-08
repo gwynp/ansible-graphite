@@ -1,6 +1,9 @@
 Graphite
 ========
-========
+
+=======
+This is a fork of the original repo by James Martin.  It's had a couple of things altered so it will run on Ubuntu 14.04 64bit.
+=======
 
 This role installs and configures graphite.
 

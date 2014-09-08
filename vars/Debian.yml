@@ -17,7 +17,8 @@ graphite_conf: /etc/graphite
 graphite_content_dir: "/usr/share/graphite-web/static"
 graphite_index_file: "{{ graphite_var }}/search_index"
 graphite_log_dir: /var/log/graphite
-graphite_python: /usr/share/pyshared/graphite
+#graphite_python: /usr/share/pyshared/graphite
+graphite_python: /usr/lib/python2.7/dist-packages/graphite
 graphite_storage_dir: "{{ carbon_local_data_dir }}"
 graphite_user: _graphite
 graphite_var: /var/lib/graphite
