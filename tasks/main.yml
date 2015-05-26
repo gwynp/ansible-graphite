@@ -28,7 +28,11 @@
   notify: restart carbon-cache
 
 - name: setup storage schemas
-  copy: src=storage-schemas.conf dest=/etc/carbon/storage-schemas.conf
+  template: src=storage-schemas.conf.j2 dest=/etc/carbon/storage-schemas.conf
+  notify: restart carbon-cache
+
+- name: setup storage schemas
+  template: src=storage-aggregation.conf.j2 dest=/etc/carbon/storage-aggregation.conf
   notify: restart carbon-cache
 
 - name: find state of graphite db

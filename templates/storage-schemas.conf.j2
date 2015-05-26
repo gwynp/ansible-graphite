@@ -7,10 +7,10 @@
 
 # Carbon's internal metrics. This entry should match what is specified in
 # CARBON_METRIC_PREFIX and CARBON_METRIC_INTERVAL settings
-[carbon]
-pattern = ^carbon\.
-retentions = 60:90d
 
-[default_10s_for_30days]
-pattern = .*
-retentions = 10s:30d
+{% for config in graphite_storage_schemas %}
+[{{ config.name }}]
+pattern = {{ config.pattern }}
+retentions = {{ config.retentions }}
+
+{% endfor %}
