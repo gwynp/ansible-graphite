@@ -53,3 +53,5 @@
   with_items:
   - "{{ apache_service }}"
   - carbon-cache
+
+- include: django_events_patch.yml
