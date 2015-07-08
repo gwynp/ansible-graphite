@@ -4,3 +4,5 @@ graphite_log_rendering_performance: no
 graphite_log_cache_performance: no
 graphite_log_metric_access: no
 graphite_timezone: UTC
+graphite_max_updates_per_second: 1000
+graphite_max_creates_per_minute: 250
