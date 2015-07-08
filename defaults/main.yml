@@ -15,3 +15,5 @@ graphite_storage_schemas:
     retentions: "10s:30d"
 
 graphite_storage_aggregations: []
+graphite_max_updates_per_second: 1000
+graphite_max_creates_per_minute: 250
