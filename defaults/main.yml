@@ -3,6 +3,7 @@
 graphite_log_rendering_performance: no
 graphite_log_cache_performance: no
 graphite_log_metric_access: no
+graphite_log_listener_connections: yes
 graphite_timezone: UTC
 
 graphite_storage_schemas:
