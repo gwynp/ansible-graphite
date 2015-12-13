@@ -1,0 +1,22 @@
+#
+# Current version (0.9.12) of Graphite web views.py file uses
+# WSGIReguest.raw_post_data what have been renamed to WSGIReguest.body
+# as described here:
+# https://docs.djangoproject.com/en/dev/releases/1.4/#httprequest-raw-post-data-renamed-to-httprequest-body
+#
+# Without this patch, events API will throw error what is described here:
+# https://answers.launchpad.net/graphite/+question/241912
+#
+---
+- name: Graphite patch | get Django version
+  command: 'python -c "import django; print(django.get_version())"'
+  register: django_version
+  changed_when: False
+
+- name: Graphite patch | Rewrite views.py
+  replace:
+    dest: /usr/lib/python2.7/dist-packages/graphite/events/views.py
+    regexp: 'request\.raw_post_data'
+    replace: 'request.body'
+    backup: true
+  when: django_version.stdout | version_compare('1.4', '>')

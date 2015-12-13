@@ -3,4 +3,18 @@
 graphite_log_rendering_performance: no
 graphite_log_cache_performance: no
 graphite_log_metric_access: no
+graphite_log_listener_connections: yes
 graphite_timezone: UTC
+
+graphite_storage_schemas:
+  - name: carbon
+    pattern: '^carbon\.'
+    retentions: "60:90d"
+
+  - name: default_10s_for_30days
+    pattern: ".*"
+    retentions: "10s:30d"
+
+graphite_storage_aggregations: []
+graphite_max_updates_per_second: 1000
+graphite_max_creates_per_minute: 250
